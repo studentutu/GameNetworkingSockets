@@ -23,7 +23,7 @@ jobs:
       run: |
         git clone https://github.com/microsoft/vcpkg.git "${VCPKG_ROOT}"
         cd "${VCPKG_ROOT}"
-        git checkout c3867e714dd3a51c272826eea77267876517ed99
+        git checkout 522253caf47268c1724f486a035e927a42a90092
         ./bootstrap-vcpkg.sh
         ./vcpkg integrate install
 
@@ -33,7 +33,7 @@ jobs:
         path: |
           ${{ env.VCPKG_DOWNLOADS }}
           ${{ env.VCPKG_DEFAULT_BINARY_CACHE }}
-        key: vcpkg-${{ runner.os }}-macos-c3867e714dd3a51c272826eea77267876517ed99-${{ hashFiles('vcpkg.json') }}
+        key: vcpkg-${{ runner.os }}-macos-522253caf47268c1724f486a035e927a42a90092-${{ hashFiles('vcpkg.json') }}
         restore-keys: |
           vcpkg-${{ runner.os }}-macos-
 

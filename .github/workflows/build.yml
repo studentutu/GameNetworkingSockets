@@ -209,7 +209,7 @@ jobs:
         run: |
           git clone https://github.com/microsoft/vcpkg.git "${{ env.VCPKG_ROOT }}"
           cd /d "${{ env.VCPKG_ROOT }}"
-          git checkout c3867e714dd3a51c272826eea77267876517ed99
+          git checkout 522253caf47268c1724f486a035e927a42a90092
           call bootstrap-vcpkg.bat -disableMetrics
         shell: cmd
 
@@ -225,7 +225,7 @@ jobs:
           path: |
             ${{ env.VCPKG_ROOT }}/downloads
             ${{ env.VCPKG_DEFAULT_BINARY_CACHE }}
-          key: vcpkg-${{ runner.os }}-${{ matrix.os-version }}-${{ matrix.crypto }}-${{ env.VCToolsVersion }}-c3867e714dd3a51c272826eea77267876517ed99-${{ hashFiles('vcpkg.json') }}
+          key: vcpkg-${{ runner.os }}-${{ matrix.os-version }}-${{ matrix.crypto }}-${{ env.VCToolsVersion }}-522253caf47268c1724f486a035e927a42a90092-${{ hashFiles('vcpkg.json') }}
           restore-keys: |
             vcpkg-${{ runner.os }}-${{ matrix.os-version }}-${{ matrix.crypto }}-${{ env.VCToolsVersion }}-
             vcpkg-${{ runner.os }}-${{ matrix.os-version }}-${{ matrix.crypto }}-
